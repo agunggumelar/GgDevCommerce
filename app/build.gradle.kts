@@ -70,7 +70,7 @@ dependencies {
 
     // Glide
     implementation(libs.glide)
-
+    implementation(libs.gson)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
