@@ -8,7 +8,7 @@ import id.ggdev.ggdevcommerce.data.utils.EmailMobileData
 interface UserDataSource {
 	suspend fun addUser(userData: UserData)
 
-	suspend fun getUserById(userId: String): id.ggdev.ggdevcommerce.data.Result<UserData?>
+	suspend fun getUserById(userId: String): Result<UserData>
 
 	fun updateEmailsAndMobiles(email: String, mobile: String) {}
 
@@ -49,9 +49,9 @@ interface UserDataSource {
 		return null
 	}
 
-	suspend fun getOrdersByUserId(userId: String): id.ggdev.ggdevcommerce.data.Result<List<UserData.OrderItem>?>
+	suspend fun getOrdersByUserId(userId: String): Result<List<UserData.OrderItem>?>
 
-	suspend fun getAddressesByUserId(userId: String): id.ggdev.ggdevcommerce.data.Result<List<UserData.Address>?>
+	suspend fun getAddressesByUserId(userId: String): Result<List<UserData.Address>?>
 
 	suspend fun getLikesByUserId(userId: String): Result<List<String>?>
 }

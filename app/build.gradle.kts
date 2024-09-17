@@ -29,6 +29,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -53,6 +56,7 @@ dependencies {
     implementation(libs.recyclerview)
 
     // Room
+    implementation(libs.androidx.activity)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     implementation(libs.legacy.support.v4)

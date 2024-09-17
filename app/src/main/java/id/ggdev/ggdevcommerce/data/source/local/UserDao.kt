@@ -9,10 +9,10 @@ interface UserDao {
 	suspend fun insert(uData: UserData)
 
 	@Query("SELECT * FROM users WHERE userId = :userId")
-	suspend fun getById(userId: String): UserData?
+	suspend fun getById(userId: String): UserData
 
 	@Query("SELECT * FROM users WHERE mobile = :mobile")
-	suspend fun getByMobile(mobile: String): UserData?
+	suspend fun getByMobile(mobile: String): UserData
 
 	@Update(entity = UserData::class)
 	suspend fun updateUser(obj: UserData)

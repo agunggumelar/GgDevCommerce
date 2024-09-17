@@ -11,7 +11,7 @@ import id.ggdev.ggdevcommerce.data.utils.DateTypeConvertors
 import id.ggdev.ggdevcommerce.data.utils.ListTypeConverter
 import id.ggdev.ggdevcommerce.data.utils.ObjectListTypeConvertor
 
-@Database(entities = [UserData::class, Product::class], version = 2)
+@Database(entities = [UserData::class, Product::class], version = 3)
 @TypeConverters(ListTypeConverter::class, ObjectListTypeConvertor::class, DateTypeConvertors::class)
 abstract class ShoppingAppDatabase : RoomDatabase() {
 	abstract fun userDao(): UserDao
